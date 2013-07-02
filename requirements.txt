@@ -1,0 +1,5 @@
+mongoengine==0.7.9
+Django==1.4
+gunicorn==0.17.2
+simplejson
+requests
