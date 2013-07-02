@@ -1,5 +1,3 @@
-faux_fb_friends
-===============
 PROGRAMMING EXERCISE
 --------------------
 
@@ -23,23 +21,27 @@ Registration should take care of the following items:
 Create a 'Show Friends' endpoint that expects an email address returns a json array of all the user's friends in the same format as the singular mongo.Person.to_json() method. In our imaginary app, this endpoint will be called frequently, so some thought should be given to performance.
 
 
-SOLUTION:
+SOLUTION
+--------
 
-See code implementation.  Specifically:
+See code implementation.  
+
+Specifically:
 - codingexercise/models.py
 - codingexercise/views.py
 - hingetest/urls.py
 
 
+
 SCRATCH NOTES:
 
-# Test register endpoint
+Test register endpoint
 curl -X POST --header "Content-Type:application/json" -d "email=j@gmail.com&first_name=j&last_name=r&gender=M&city=Jamaica" http://hinge-interview02.herokuapp.com/register | python -mjson.tool
 
-# Test friends endpoint
+Test friends endpoint
 curl -X POST --header "Content-Type:application/json" -d "email=j@gmail.com" http://hinge-interview02.herokuapp.com/friends | python -mjson.tool
 
-# Connect to Mongo DB
+Connect to Mongo DB
 mongo -u heroku_app14429742 -p b0ohnarudeiq335nudjnvvfsf5 ds041337.mongolab.com:41337/heroku_app14429742
 
 
